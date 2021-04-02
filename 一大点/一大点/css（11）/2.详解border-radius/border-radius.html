@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .demo1, .demo2, .demo3, .demo4 {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          margin-right: 20px;
+          display: inline-block;
+      }
+      .demo1 > div  {
+         width: 200px;
+         height: 200px;
+         position: absolute;
+      }
+      .round-1 {
+          border-radius: 100% 0 0;
+          border: 1px solid #f20;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+      }
+      .round-2 {
+          border: 1px solid lime;
+          border-radius: 0 100% 0 0;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+      }
+      .round-3 {
+          border: 1px solid #f0f;
+          border-radius: 0 0 100%;
+          border-left-color: transparent;
+          border-top-color: transparent;
+      }
+      .round-4 {
+          border: 1px solid #0ff;
+          border-radius: 0 0 0 100%;
+          border-top-color: transparent;
+          border-right-color: transparent;
+      }
+
+      .demo2 > div {
+          width: 98px;
+          height: 98px;
+          position: absolute;
+      }
+
+      .round-5 {
+          border: 1px solid #f20;
+          top: 0;
+          left: 0;
+          border-radius: 100% 100% 0;
+      }
+      .round-6 {
+          border: 1px solid #f0f;
+          top: 0;
+          right: 0;
+          border-radius: 100% 100% 100% 0;
+      }
+      .round-7 {
+          border: 1px solid #0ff;
+          bottom: 0;
+          right: 0;
+          border-radius: 0% 100% 100%;
+      }
+      .round-8 {
+          border: 1px solid lime;
+          bottom: 0;
+          left: 0;
+          border-radius: 100% 0 100% 100%;
+      }
+      .demo3 {
+          border: 1px solid #f0f;
+          border-radius: 100%;
+      }
+      .demo3 > div {
+        position: absolute;
+        width: 98px;
+        height: 98px;
+      }
+      .round-9 {
+          border: 1px solid #f20;
+          top: 0;
+          left: 0;
+          border-radius: 0 0 100%  0;
+          border-top-color: transparent;
+          border-left-color: transparent;
+      }
+      .round-10 {
+          border: 1px solid #0ff;
+          top: 0;
+          right: 0;
+          border-radius: 0 0  0 100%;
+          border-top-color: transparent;
+          border-right-color: transparent;
+      }
+      .round-11 {
+          border: 1px solid lime;
+          bottom: 0;
+          left: 0;
+          border-radius: 0 100% 0  0;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+      }
+      .round-12 {
+          border: 1px solid #ff0;
+          bottom: 0;
+          right: 0;
+          border-radius: 100% 0 0 0;
+          border-bottom-color: transparent;
+          border-right-color: transparent;
+      }
+
+
+    </style>
+</head>
+   
+    <div class="demo1">
+        <div class="round-1"></div>
+        <div class="round-2"></div>
+        <div class="round-3"></div>
+        <div class="round-4"></div>
+    </div>
+    <div class="demo2">
+        <div class="round-5"></div>
+        <div class="round-6"></div>
+        <div class="round-7"></div>
+        <div class="round-8"></div>
+    </div>
+    <div class="demo3">
+        <div class="round-9"></div>
+        <div class="round-10"></div>
+        <div class="round-11"></div>
+        <div class="round-12"></div>
+    </div>
+   
+   
+
+</body>
+
+</html>
