@@ -1,34 +1,51 @@
-const express = require("express");
-const app = express();
-//  express实例化
-const bodyparser = require("body-parser");
+// const express = require("express");
+// const app = express();
+// //  express实例化
+// const bodyparser = require("body-parser");
 
-// 解析表单数据 x-www-form-urlencode 
-app.use(bodyparser.urlencoded({ extended: false }));
-// 解析json
-app.use(bodyparser.json())
+// // 解析表单数据 x-www-form-urlencode
+// app.use(bodyparser.urlencoded({ extended: false }));
+// // 解析json
+// app.use(bodyparser.json())
 
-// app.get("/user/login", (req, res) => {
+// // app.get("/user/login", (req, res) => {
+// //   console.log("注册");
+// //   console.log(req.query);
+// //   // res.send('注册成功');
+// //   res.send({
+// //     msg: req.query,
+// //   });
+// // });
+// let userModule = require('./router/userlogin.js')
+// app.use('/user', userModule)
+
+// app.post("/user/login", (req, res) => {
 //   console.log("注册");
-//   console.log(req.query);
+//   console.log(req.body);
 //   // res.send('注册成功');
 //   res.send({
-//     msg: req.query,
+//     msg: "监听成功",
+//     data: req.body.id, 
 //   });
+// });  
+
+// app.listen(3000, () => {
+//   console.log("server start");
 // });
-let userModule = require('./router/userlogin.js')
-app.use('/user', userModule)
 
-app.post("/user/login", (req, res) => {
-  console.log("注册");
-  console.log(req.body);
-  // res.send('注册成功');
-  res.send({
-    msg: "监听成功",
-    data: req.body.id,
-  });
-});
+const express = require("express");
+const db = require("./db/connect.js");
+const app = express();
+const bodyparser = require("body-parser");
 
-app.listen(3000, () => {
+// 解析表单数据 x-www-form-urlencode
+app.use(bodyparser.urlencoded({ extended: false }));
+// 解析json
+app.use(bodyparser.json());
+// 引入路由
+const userRouter = require("./db/router/userRouter.js");
+
+app.use("/user", userRouter);
+app.listen(3000, function () {
   console.log("server start");
 });
